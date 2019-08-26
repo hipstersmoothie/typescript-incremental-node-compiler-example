@@ -1,0 +1,5 @@
+To check that incremental builds are working I:
+
+1. `yarn build`
+2. Delete the `.d.ts` file in `dist` (if incremental builds are working the next step should not emit any files because tsbuldinfo thinks they are already on the system)
+3. `yarn build`

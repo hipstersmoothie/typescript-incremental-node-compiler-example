@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./compiler"
+    "build": "node ./compiler",
+    "build:tsc": "tsc -b tsconfig.json --incremental"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "3.6.1-rc"
+    "typescript": "^3.6.2"
   }
 }

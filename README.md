@@ -11,5 +11,5 @@ To check that the builds are fast run
 
 Compare this with `tsc`:
 
-1. `yarn tsc -b tsconfig.json --incremental` (first time takes ~2s)
-2. `yarn tsc -b tsconfig.json --incremental` (second time takes 0.31s)
+1. `yarn build:tsc` (first time takes ~2s)
+2. `yarn build:tsc` (second time takes 0.31s)

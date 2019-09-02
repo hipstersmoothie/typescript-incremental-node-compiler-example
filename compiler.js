@@ -13,8 +13,7 @@ const tsconfig = ts.getParsedCommandLineOfConfigFile(
 const { options, projectReferences, fileNames } = tsconfig;
 const allOptions = {
   ...options,
-  incremental: true,
-  tsBuildInfoFile: path.join(__dirname, 'tsconfig.tsbuildinfo')
+  incremental: true
 };
 
 const host = ts.createIncrementalCompilerHost(allOptions, ts.sys);

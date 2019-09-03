@@ -28,7 +28,6 @@ const diagnostics = [
   ...program.getConfigFileParsingDiagnostics(),
   ...program.getSyntacticDiagnostics(),
   ...program.getOptionsDiagnostics(),
-  ...program.getOptionsDiagnostics(),
   ...program.getSemanticDiagnostics()
 ];
 const result = program.emit();

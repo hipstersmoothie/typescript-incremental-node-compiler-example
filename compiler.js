@@ -24,10 +24,15 @@ const program = ts.createIncrementalProgram({
   rootNames: fileNames
 });
 
+const diagnostics = [
+  ...program.getConfigFileParsingDiagnostics(),
+  ...program.getSyntacticDiagnostics(),
+  ...program.getOptionsDiagnostics(),
+  ...program.getOptionsDiagnostics(),
+  ...program.getSemanticDiagnostics()
+];
 const result = program.emit();
-const allDiagnostics = ts
-  .getPreEmitDiagnostics(program)
-  .concat(result.diagnostics);
+const allDiagnostics = diagnostics.concat(result.diagnostics);
 
 if (allDiagnostics.length) {
   const formattedDiagnostics = ts.formatDiagnosticsWithColorAndContext(
